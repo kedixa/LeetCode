@@ -2,7 +2,7 @@ class Solution {
 public:
     double findMedianSortedArrays(vector<int>& nums1, vector<int>& nums2) {
         /*
-            Õâ¸öÌâÊÇÎÒÂÒ¸Ä³öÀ´µÄ.....
+            è¿™ä¸ªé¢˜æ˜¯æˆ‘ä¹±æ”¹å‡ºæ¥çš„.....
         */
         int n = nums1.size(), m = nums2.size();
         int k = (n + m + 1) / 2;
@@ -11,10 +11,10 @@ public:
         vector<int>::iterator mid1;
 
         /*
-            Ê×ÏÈ¶ş·Önums1£¬¼ÙÉèµ±Ç°Î»ÖÃÎªmid£¬ÔÚnums2ÖĞ²éÕÒnums1[mid]µÄupper_bound£¬
-            ½«Á½¸öÊı×é·Ö³É´óÓÚµÈÓÚnums1[mid]ºÍĞ¡ÓÚµÈÓÚnums1[mid]Á½²¿·Ö£¬
-            Ö±µ½³öÏÖÏÂÊöÇé¿ö£º
-            1. ¸Ã²¿·ÖÎª¿Õ£»
+            é¦–å…ˆäºŒåˆ†nums1ï¼Œå‡è®¾å½“å‰ä½ç½®ä¸ºmidï¼Œåœ¨nums2ä¸­æŸ¥æ‰¾nums1[mid]çš„upper_boundï¼Œ
+            å°†ä¸¤ä¸ªæ•°ç»„åˆ†æˆå¤§äºç­‰äºnums1[mid]å’Œå°äºç­‰äºnums1[mid]ä¸¤éƒ¨åˆ†ï¼Œ
+            ç›´åˆ°å‡ºç°ä¸‹è¿°æƒ…å†µï¼š
+            1. è¯¥éƒ¨åˆ†ä¸ºç©ºï¼›
         */
         while(begin1 < end1)
         {
@@ -24,11 +24,11 @@ public:
             if(k > prev_size) k -= prev_size, begin1 = mid1, begin2 = it2;
             else end1 = mid1, end2 = it2;
             /*
-            2. Ëµ²»Çå³şµÄÇé¿ö¡£
+            2. è¯´ä¸æ¸…æ¥šçš„æƒ…å†µã€‚
             */
             if(end1 - begin1 == 1 && (end2 - begin2 == 0 || *begin2 > *begin1)) break;
         }
-        // tag ±íÊ¾ÖĞ¼äµÄÊıÔÚnum1»¹ÊÇnums2
+        // tag è¡¨ç¤ºä¸­é—´çš„æ•°åœ¨num1è¿˜æ˜¯nums2
         int tag;
         if(end1 - begin1 == 1)
         {
@@ -57,6 +57,6 @@ public:
             }
             return sum / 2.0;
         }
-        // ×ÜÖ®ºÜÂÒ
+        // æ€»ä¹‹å¾ˆä¹±
     }
 };
