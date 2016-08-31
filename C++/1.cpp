@@ -3,17 +3,17 @@ public:
     vector<int> twoSum(vector<int>& nums, int target) {
         int len = nums.size(), s;
         /*
-            ±éÀúnums£¬µ±±éÀúµ½nums[i]Ê±£¬Èç¹ûÔÚnums[0...i-1]ÖĞ°üº¬Êı×Ö(target - nums[i]),
-            ÔòÎÊÌâ½â¾ö¡£
+            éå†numsï¼Œå½“éå†åˆ°nums[i]æ—¶ï¼Œå¦‚æœåœ¨nums[0...i-1]ä¸­åŒ…å«æ•°å­—(target - nums[i]),
+            åˆ™é—®é¢˜è§£å†³ã€‚
         */
-        unordered_set<int> se; // Ê¹ÓÃhash±íÅĞ¶ÏÄ³¸öÊı×ÖÊÇ·ñ³öÏÖ¹ı
-        se.insert(nums[0]); // ÌâÄ¿±£Ö¤ÓĞÇÒÖ»ÓĞÒ»¸ö½â£¬ËùÒÔ´Ë´¦²»»áÔ½½ç
+        unordered_set<int> se; // ä½¿ç”¨hashè¡¨åˆ¤æ–­æŸä¸ªæ•°å­—æ˜¯å¦å‡ºç°è¿‡
+        se.insert(nums[0]); // é¢˜ç›®ä¿è¯æœ‰ä¸”åªæœ‰ä¸€ä¸ªè§£ï¼Œæ‰€ä»¥æ­¤å¤„ä¸ä¼šè¶Šç•Œ
         vector<int>::iterator it;
         for(s = 1; s < len; ++s)
         {
             if(se.find(target - nums[s]) != se.end())
             {
-                // Ê¹ÓÃunordered_mapÔò´Ë´¦²»ĞèÒª½øĞĞÏßĞÔ²éÕÒ
+                // ä½¿ç”¨unordered_mapåˆ™æ­¤å¤„ä¸éœ€è¦è¿›è¡Œçº¿æ€§æŸ¥æ‰¾
                 it = find(nums.begin(), nums.begin() + s, target - nums[s]);
                 break;
             }
@@ -28,7 +28,7 @@ public:
     vector<int> twoSum(vector<int>& nums, int target) {
         int len = nums.size(), s;
         /*
-            ²»Ê¹ÓÃ¶îÍâ´æ´¢¿Õ¼ä£¬µ«¸´ÔÓ¶ÈÎªO(n^2)µÄ·½·¨¡£
+            ä¸ä½¿ç”¨é¢å¤–å­˜å‚¨ç©ºé—´ï¼Œä½†å¤æ‚åº¦ä¸ºO(n^2)çš„æ–¹æ³•ã€‚
         */
         vector<int>::iterator it;
         for(s = 0; s < len - 1; ++s)
