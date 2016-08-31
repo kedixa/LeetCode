@@ -1,7 +1,7 @@
 class Solution {
 public:
     string longestPalindrome(string s) {
-        // Manacher�㷨
+        // Manacher算法
         int len = s.length();
         string t = string(len * 2 + 3, '\0');
         for(int i = 0; i < len; ++i)
