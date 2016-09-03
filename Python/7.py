@@ -12,4 +12,3 @@ class Solution(object):
             x=-x
         x=int(str(x)[::-1])
         return 0 if x>=1<<31 else x if t>0 else -x
-
