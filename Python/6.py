@@ -22,3 +22,4 @@ class Solution(object):
                 if 0 < j+2*n-2-2*i < l and j%(n-1): r.append(s[j+2*n-2-2*i])
                 j += 2 * n - 2
         return ''.join(r)
+
