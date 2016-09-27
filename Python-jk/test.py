@@ -1,3 +1,3 @@
-a=Solution()
-b=a.function()
-print(b)
+# a=Solution()
+# b=a.function()
+# print(b)
