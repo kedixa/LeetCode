@@ -19,6 +19,9 @@ public:
         };
         auto it = lower_bound(intervals.begin(), intervals.end(), newInterval, cmp);
         it = intervals.insert(it, newInterval);
+        /*
+            按照cmp的排序方法，newInterval可能与前面的区间相交，所以要判断一下。
+        */
         if(it != intervals.begin() && (*(it - 1)).end >= (*it).start) --it;
         auto it2 = it;
         newInterval = *it2;
@@ -29,6 +32,9 @@ public:
             else break;
         }
         *it = newInterval;
+        /*
+            去掉被合并的区间
+        */
         intervals.erase(
             remove_if(it, intervals.end(), [](Interval &v){
                 return v.start == -1 && v.end == -1;}
