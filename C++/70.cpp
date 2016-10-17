@@ -9,7 +9,7 @@ public:
     }
     int climbStairs(int n) {
         /*
-            打表
+            打表。
         */
         return vec[n];
     }
