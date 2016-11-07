@@ -3,6 +3,8 @@
 - name:kedixa/LeetCode
 - https:https://github.com/kedixa/LeetCode.git
 - ssh:git@github.com:kedixa/LeetCode.git
+
+
 |Problem|Title|Difficulty|Categorization|Note|
 |---------------|------|-----------|-------------------|------|
 |1|Two Sum|Easy|Dirctionary (map) Application|Don't to enum every combination|
