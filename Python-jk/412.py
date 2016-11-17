@@ -16,6 +16,3 @@ class Solution(object):
             else:
                 l.append(str(i+1))
         return l
-a=Solution()
-b=a.fizzBuzz(15)
-print(b)

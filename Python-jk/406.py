@@ -11,7 +11,3 @@ class Solution(object):
             re_people.insert(x[1],x)
         # print(re_people)
         return re_people
-
-a=Solution()
-b=a.reconstructQueue([[7,0], [4,4], [7,1], [5,0], [6,1], [5,2]])
-print(b)

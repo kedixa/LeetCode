@@ -23,8 +23,10 @@
 |344|Reverse String|Easy|String operation|Make good use of matrix slice|
 |371|Sum of Two Integers|Easy|Bit operation|How to calculate sum of two integers without '+' and '-'|
 |383|Ransom Note|Easy|Dirctionary (map) Application|This is an easy question|
-|389|Find the Difference|Easy|Bit Operation|same as 136|
+|389|Find the Difference|Easy|Bit Operation|Same as 136|
 |404|Sum of Left Leaves|Easy|Data Structure: Binary Tree|Left leaves judging|
 |406|Queue Reconstruction by Height|Medium|Sort Problem<br>Date Structure: Linear List|Multiple key sort problem|
+|407|Arithmetic Slices|Medium|Date Structure: Linear List|You Need to find all local maximum arithmetic sequence|
 |412|Fizz Buzz|Easy|Data Structure: Linear List|Insert Operation|
 |419|Battleships in a Board|Medium|Data Structure: Array|Array traversal|
+|455|Assign Cookies|Easy|Sort Problem<br>Date Structure: Linear List|Build a double-layer circulation to find the maximum number|
