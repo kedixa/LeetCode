@@ -1,6 +1,7 @@
 class Solution {
 public:
     int minimumTotal(vector<vector<int>>& triangle) {
+        // 动态规划基础
         int sz = triangle.size();
         vector<long long> res(sz, (long long)numeric_limits<int>::max());
         res[0] = triangle[0][0];
