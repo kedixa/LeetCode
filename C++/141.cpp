@@ -18,6 +18,7 @@ public:
             p1 = p1 -> next;
             p2 = p2 -> next;
             if(p2 == nullptr) return false;
+            if(p1 == p2) return true;
             p2 = p2 -> next;
             if(p2 == nullptr) return false;
         }
